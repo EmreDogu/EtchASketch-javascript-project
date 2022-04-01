@@ -29,13 +29,13 @@ function clearAndResize() {
     for (let i = 0; i<size ; i++) {
         var row = document.createElement("div");
         var width = getWidth();
-        var height = getHeight()/16;
+        var height = getHeight()/size;
         row.classList.add("rows");
         row.setAttribute("width", width);
         row.setAttribute("height", height);
-        for(let j = 0; j < 16; j++) {
+        for(let j = 0; j < size; j++) {
             var cell = document.createElement("div");
-            width = row.getAttribute("width")/16;
+            width = row.getAttribute("width")/size;
             height = row.getAttribute("height");
             cell.classList.add("cells");
             cell.style.width = width+"px";
